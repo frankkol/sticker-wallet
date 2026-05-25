@@ -1,20 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { BookOpen, BarChart3, Download, Upload, Trophy, RotateCcw } from "lucide-react";
-// import { useAlbum } from "@/lib/album-storage";
 import { useAlbum } from "./lib/album-storage";
-// import { type Album } from "@/lib/album-data";
 import { type Album } from "./lib/album-data";
-// import { WelcomeScreen } from "@/components/album/WelcomeScreen";
 import { WelcomeScreen } from "./components/album/WelcomeScreen";
-// import { ImportModal } from "@/components/album/ImportModal";
 import { ImportModal } from "./components/album/ImportModal";
-// import { CountryPage } from "@/components/album/CountryPage";
 import { CountryPage } from "./components/album/CountryPage";
-// import { Dashboard } from "@/components/album/Dashboard";
 import { Dashboard } from "./components/album/Dashboard";
-// import { SearchBar } from "@/components/album/SearchBar";
 import { SearchBar } from "./components/album/SearchBar";
-// import { cn } from "@/lib/utils";
 import { cn } from "./lib/utils";
 
 type View = "album" | "dashboard" | "export";
@@ -113,118 +105,6 @@ function App() {
         </nav>
       </header>
 
-      {/* <header className="sticky top-0 z-40 px-3 sm:px-6 pt-3 sm:pt-5">
-        <div className="glass-strong rounded-full shadow-card px-3 sm:px-4 py-2 flex items-center gap-2 sm:gap-4 max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 shrink-0 pl-1">
-            <div className="h-8 w-8 rounded-xl flex items-center justify-center shadow-glow"
-                 style={{ background: "var(--gradient-hero)" }}>
-              <Trophy className="h-4 w-4 text-background" />
-            </div>
-            <span className="font-bold hidden sm:inline">Album 2026</span>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setView("album")}
-                className={cn(
-                  "flex items-center gap-2 px-3 py-2 rounded-md transition-colors",
-                  view === "album"
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-accent text-muted-foreground hover:text-foreground"
-                )}
-              >
-                <BookOpen className="h-4 w-4" />
-                <span className="hidden sm:inline">Album</span>
-              </button>
-              <button
-                onClick={() => setView("dashboard")}
-                className={cn(
-                  "flex items-center gap-2 px-3 py-2 rounded-md transition-colors",
-                  view === "dashboard"
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-accent text-muted-foreground hover:text-foreground"
-                )}
-              >
-                <BarChart3 className="h-4 w-4" />
-                <span className="hidden sm:inline">Dashboard</span>
-              </button>
-              <button
-                onClick={() => setView("export")}
-                className={cn(
-                  "flex items-center gap-2 px-3 py-2 rounded-md transition-colors",
-                  view === "export"
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-accent text-muted-foreground hover:text-foreground"
-                )}
-              >
-                <Download className="h-4 w-4" />
-                <span className="hidden sm:inline">Export</span>
-              </button>
-            </div>
-          </div>
-
-          {view === "album" && (
-            <SearchBar album={album} onSelect={onSearchSelect} />
-            // <SearchBar
-            //   countries={album.countries}
-            //   current={countryIdx}
-            //   onSelect={setCountryIdx}
-            // />
-          )}
-        </div>
-      </header> */}
-
-      {/* <main className="flex-1 overflow-hidden">
-        <div className="h-full max-w-4xl mx-auto px-4 py-6 w-full flex flex-col">
-          {view === "album" && country ? (
-            <>
-              <CountryPage
-                album={album}
-                country={country}
-                onPrev={goPrev}
-                onNext={goNext}
-                onPositive={(code) => updateSticker(code, { positive: +1 })}
-                onNegative={(code) => updateSticker(code, { negative: -1 })}
-                highlightCode={highlight}
-              />
-              <div className="mt-6 flex gap-2 justify-center">
-                <button
-                  onClick={() => importAlbum(album)}
-                  className="flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-                >
-                  <Upload className="h-4 w-4" />
-                  Import
-                </button>
-                <button
-                  onClick={() => setImportOpen(true)}
-                  className="flex items-center gap-2 px-4 py-2 rounded-md border hover:bg-accent transition-colors"
-                >
-                  <Download className="h-4 w-4" />
-                  Export
-                </button>
-                <button
-                  onClick={() => {
-                    if (confirm("Tem certeza que deseja resetar o album?")) {
-                      reset();
-                    }
-                  }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-md border border-red-200 hover:bg-red-50 text-red-600 transition-colors"
-                >
-                  <RotateCcw className="h-4 w-4" />
-                  Reset
-                </button>
-              </div>
-            </>
-          ) : view === "dashboard" ? (
-            <Dashboard album={album} />
-          ) : (
-            <div className="flex items-center justify-center h-full text-muted-foreground">
-              <div className="text-center">
-                <Trophy className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                <p>Funcionalidade de export em desenvolvimento</p>
-              </div>
-            </div>
-          )}
-        </div>
-      </main> */}
       <main id="album-top" className="max-w-6xl mx-auto px-3 sm:px-6 pt-6">
         {view === "album" && country && (
           <CountryPage
