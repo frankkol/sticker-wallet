@@ -16,10 +16,10 @@
  - [Tailwind](https://tailwindcss.com/)
 
 ## 📸 Telas do sistema
-![Tela inicial WCF 2026](./public/home.png)![Exportar carteira](./public/export.png)
-![Importar carteira](./public/import.png)![Dados](./public/dashboard.png)
-![Seleção Mexico](./public/not_complete.png)![Seleção Brasil](./public/complete.png)
-![Busca por código](./public/search.png)
+![Tela inicial WCF 2026](./public/print/home.png)![Exportar carteira](./public/print/export.png)
+![Importar carteira](./public/print/import.png)![Dados](./public/print/dashboard.png)
+![Seleção Mexico](./public/print/not_complete.png)![Seleção Brasil](./public/print/complete.png)
+![Busca por código](./public/print/search.png)
 
 ## 🌐 API
 
@@ -64,7 +64,7 @@
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `code`     | `String` | Identificador único da figura. |           |
-| `type`  | `String`| { team | player | squad } identifica o tipo da figura. |
+| `type`  | `String`| { team , player , squad } identifica o tipo da figura. |
 | `name`  | `String`| **Opcional**. Destinado ao nome do jogador. |
 | `hasSticker`  | `Boolean`| Controle para validação se possui a figura. |
 | `positiveQty`  | `Integer`| Controle para figuras extras. |
