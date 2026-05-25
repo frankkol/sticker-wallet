@@ -2,13 +2,22 @@
 [![github](https://img.shields.io/badge/github-%40frankkol-grey?style=for-the-badge&logo=github)](https://github.com/frankkol)
 [![linkedin](https://img.shields.io/badge/linkedin-%40frankkol-blue?style=for-the-badge)](https://linkedin.com/in/frankkol)
 
-## Este front-end tem como objetivo permitir ao ao usuário o gerenciamento da sua carteira de figurinhas da copa do mundo 2026.
+## 💡Motivação do projeto.
+
+Com o hype recente das coleções de figurinhas da copa do mundo, comecei a notar muitas pessoas utilizando planilhas online para controlar suas carteiras e descobrir quais itens faltavam e quais tinham extra.
+
+## Este front-end tem como objetivo permitir ao usuário o gerenciamento da sua carteira de figurinhas da copa do mundo 2026.
 
 - Visualizar dados da carteira (total, completas, faltantes e extras);
 - Visualizar valor de investimento da carteira;
 - Visão global do progresso da sua coleção (por página, país ou geral);
 - Busca (por código, jogador ou país);
 
+## 🚀 Próximos passos do projeto
+
+- Criar uma funcionalidade para importar carteira de amigos e realizar comparações automáticas;
+- Sugerir trocas benéficas para ambos os lados;
+- Transformar algo manual em uma experiência prática e inteligente;
 
 ## Tecnologias
  - [React](https://react.dev/)
