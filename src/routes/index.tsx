@@ -1,28 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { BookOpen, BarChart3, Download, Upload, Trophy, RotateCcw } from "lucide-react";
-// import { useAlbum } from "@/lib/album-storage";
 import { useAlbum } from "../lib/album-storage";
-// import { type Album } from "@/lib/album-data";
 import { type Album } from "../lib/album-data";
-// import { WelcomeScreen } from "@/components/album/WelcomeScreen";
 import { WelcomeScreen } from "../components/album/WelcomeScreen";
-// import { ImportModal } from "@/components/album/ImportModal";
 import { ImportModal } from "../components/album/ImportModal";
-// import { CountryPage } from "@/components/album/CountryPage";
 import { CountryPage } from "../components/album/CountryPage";
-// import { Dashboard } from "@/components/album/Dashboard";
 import { Dashboard } from "../components/album/Dashboard";
-// import { SearchBar } from "@/components/album/SearchBar";
 import { SearchBar } from "../components/album/SearchBar";
-// import { cn } from "@/lib/utils";
 import { cn } from "../lib/utils";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Album 2026 — Carteira de Figurinhas Copa do Mundo" },
+      { title: "Álbum 2026 — Carteira de Figurinhas Copa do Mundo" },
       { name: "description", content: "Gerencie sua carteira de figurinhas da Copa do Mundo 2026: possuídas, faltantes, extras, dashboard e import/export." },
     ],
   }),
@@ -99,7 +91,7 @@ function Index() {
                  style={{ background: "var(--gradient-hero)" }}>
               <Trophy className="h-4 w-4 text-background" />
             </div>
-            <span className="font-bold hidden sm:inline">Album 2026</span>
+            <span className="font-bold hidden sm:inline">Álbum 2026</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-1 bg-secondary/40 rounded-full p-1">
@@ -156,7 +148,7 @@ function Index() {
       {/* Mobile bottom nav */}
       <nav className="sm:hidden fixed bottom-3 left-3 right-3 z-40 glass-strong rounded-full shadow-card p-1.5 flex items-center justify-around">
         <NavTab active={view === "album"} onClick={() => setView("album")} icon={<BookOpen className="h-5 w-5" />} label={view === "album" ? "" : "Carteira"} />
-        <NavTab active={view === "dashboard"} onClick={() => setView("dashboard")} icon={<BarChart3 className="h-5 w-5" />} label={view === "dashboard" ? "" : "Dados"} />
+        <NavTab active={view === "dashboard"} onClick={() => setView("dashboard")} icon={<BarChart3 className="h-5 w-5" />} label={view === "dashboard" ? "" : "Indicadores"} />
         <NavTab active={view === "export"} onClick={() => { setView("export"); handleExport(); }} icon={<Download className="h-5 w-5" />} label={view === "export" ? "" : "Exportar"} />
         <NavTab active={false} onClick={() => setImportOpen(true)} icon={<Upload className="h-5 w-5" />} label="Upload"/>
       </nav>

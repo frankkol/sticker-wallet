@@ -81,12 +81,12 @@ function App() {
               style={{ background: "var(--gradient-hero)" }}>
               <Trophy className="h-4 w-4 text-background" />
             </div>
-            <span className="font-bold hidden sm:inline">Album 2026</span>
+            <span className="font-bold hidden sm:inline">Álbum 2026</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-1 bg-secondary/40 rounded-full p-1">
             <NavTab active={view === "album"} onClick={() => setView("album")} icon={<BookOpen className="h-4 w-4" />} label="Carteira" />
-            <NavTab active={view === "dashboard"} onClick={() => setView("dashboard")} icon={<BarChart3 className="h-4 w-4" />} label="Indicadores" />
+            <NavTab active={view === "dashboard"} onClick={() => setView("dashboard")} icon={<BarChart3 className="h-4 w-4" />} label="Dados" />
             <NavTab active={view === "export"} onClick={() => { setView("export"); handleExport(); }} icon={<Download className="h-4 w-4" />} label="Exportar" />
             <NavTab active={false} onClick={() => setImportOpen(true)} icon={<Upload className="h-4 w-4" />} label="Upload" />
           </div>

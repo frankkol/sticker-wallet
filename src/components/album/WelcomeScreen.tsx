@@ -11,7 +11,7 @@ export function WelcomeScreen({ onCreate, onImport }: { onCreate: () => void; on
           </div>
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2">FIFA World Cup</p>
           <h1 className="text-5xl sm:text-6xl font-black tracking-tight">
-            <span className="text-gradient">Album 2026</span>
+            <span className="text-gradient">Álbum 2026</span>
           </h1>
           <p className="mt-4 text-muted-foreground">
             Gerencie sua carteira de figurinhas com estilo premium.

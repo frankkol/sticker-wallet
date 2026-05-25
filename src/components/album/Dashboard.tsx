@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { Trophy, Layers, AlertCircle, Sparkles, TrendingUp, Wallet } from "lucide-react";
-// import type { Album } from "@/lib/album-data";
 import type { Album } from "../../lib/album-data";
 
 const STICKER_PRICE = 1.0; // R$ per sticker (default)
